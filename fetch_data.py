@@ -38,9 +38,9 @@ if __name__ == "__main__":
 
     # Retrieve values from the environment
     AOC_YEAR = 2024
-    AOC_DAY = 9
+    AOC_DAY = 10
     SESSION_COOKIE = os.getenv("SESSION_COOKIE")
-    OUTPUT_FILE = f"data_{AOC_DAY}.txt"
+    OUTPUT_FILE = f"data_{AOC_DAY}/data_{AOC_DAY}.txt"
     
     fetch_aoc_input(AOC_YEAR, AOC_DAY, SESSION_COOKIE, OUTPUT_FILE)
 
