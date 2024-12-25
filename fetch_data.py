@@ -2,9 +2,6 @@ import os
 import requests
 
 def load_env(filename):
-    """
-    Loads environment variables from a .env file.
-    """
     with open(filename) as f:
         for line in f:
             # Ignore comments and empty lines
@@ -12,9 +9,6 @@ def load_env(filename):
                 key, value = line.strip().split("=", 1)
                 os.environ[key] = value
 def fetch_aoc_input(year, day, session_cookie, output_file):
-    """
-    Fetches the input for a specific Advent of Code day and saves it to a file.
-    """
     url = f"https://adventofcode.com/{year}/day/{day}/input"
     headers = {"Cookie": f"session={SESSION_COOKIE}"}
     
@@ -38,7 +32,7 @@ if __name__ == "__main__":
 
     # Retrieve values from the environment
     AOC_YEAR = 2024
-    AOC_DAY = 24
+    AOC_DAY = 25
     SESSION_COOKIE = os.getenv("SESSION_COOKIE")
     OUTPUT_FILE = f"data_{AOC_DAY}.txt"
     
